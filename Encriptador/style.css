@@ -1,0 +1,224 @@
+html, body {
+    margin: 100;
+    padding: 100;
+}
+html {
+    background: url("Imagenes/oracleAlura.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment : fixed;
+}
+
+*{
+  /*  background: #f1f1f5;*/
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.logo{
+    padding-top: 10px;
+    margin-top: 10px;
+    width: 15%;
+}
+main{
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
+.text-area-container {
+    position: relative;
+    display: block;
+    justify-content: center;
+    align-items: flex-start; /* Alinear el contenido al inicio */
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo transparente */
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px; /* Ajusta el margen superior */
+}
+
+.text-area {
+    border: none;
+    color: #0A3871;
+    padding: 10px;
+    text-transform: lowercase;
+    background-color: transparent;
+    width: 100%;
+    resize: vertical;
+    height: 200px;
+} 
+
+.Informacion{
+    color: #18202c;
+    overflow: hidden; /* Para ocultar las letras adicionales */
+    border-right: 0.15em solid #000; /* Efecto de escritura */
+    white-space: nowrap; /* Evita que se haga un salto de línea */
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    animation: escribir 4s steps(40) infinite;
+    margin-top: 10px;
+}
+      
+@keyframes escribir {
+    from {
+        width: 0; /* Comienza sin texto visible */
+    }
+    to {
+        width: 100%; /* Muestra todo el texto */
+    }
+}
+
+::placeholder{ 
+    color: #0A3871;
+}
+.text-area:focus{
+    outline: none;
+}
+.mensaje-container {
+    position: fixed;
+    top: 50%; /* Ajusta la posición vertical  */
+    left: 50%; /* Ajusta la posición horizontal */
+    transform: translate(-50%, -50%); /* Centra el contenedor en el medio de la pantalla */
+}
+.mensaje {
+    font-style: oblique;
+    font-weight: bold;
+    background-color: transparent;
+  /*  background-image: url(Imagenes/ImagenCostado.png);*/
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    border: none;
+    border-radius: 24px;
+    color: #000000;
+    margin-left: 190px;
+    margin-top: 160px;
+    padding-left: 20px;
+    height: 450px;
+    position: block;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+  
+.mensaje:focus{
+    outline: none;
+}
+
+.btn-desencriptar{
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 30px;
+    margin-top: 310px;
+    width: 328px;
+    position: relative;
+    transition: 10ms;
+    box-shadow: 10px 10px 30px 15px #615f5f;
+}
+
+
+.btn-encriptar{
+    background: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 80px;
+    margin-top: 310px;
+    width: 328px;
+    transition: 80ms;
+    box-shadow: 10px 10px 30px 15px #615f5f;
+}
+
+.btn-copiar{
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 200px;
+    margin-top: -50px;
+    position: absolute;
+    width: 336px;
+    transition: 80ms;
+    box-shadow: 10px 10px 30px 15px #4db47c;
+
+}
+.copyright{
+    color:#070707;
+    font-size: 18px;
+    margin:20px;
+    height: 67px;
+    margin-left: 550px;
+    margin-top: auto;
+    position: block;
+}
+
+/* Estilos generales */
+
+/* Estilos para pantallas grandes */
+@media screen and (min-width: 768px) {
+    /* Agrega aquí los estilos específicos para pantallas grandes */
+  
+    /* Por ejemplo, puedes ajustar el tamaño del logo y el margen izquierdo */
+    .logo {
+      width: 10%;
+    }
+    main {
+      margin-left: 150px;
+    }
+}
+  
+  /* Estilos para tablets y dispositivos móviles */
+   /* Agrega aquí los estilos específicos para tablets y dispositivos móviles */
+@media screen and (max-width: 767px) {
+  
+    /* Por ejemplo, puedes ajustar el tamaño del logo y el margen izquierdo */
+    .logo {
+      width: 20%;
+    }
+    main {
+      margin-left: 20px;
+    }
+  
+    /* Ajusta el tamaño del textarea para una mejor experiencia de escritura en dispositivos móviles */
+    .text-area {
+      height: 180px;
+    }
+  
+    /* Ajusta el tamaño de los botones */
+    .btn-encriptar,
+    .btn-desencriptar,
+    .btn-copiar {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 50px;
+    }
+    .btn-copiar{
+        margin-top: -50px;
+        margin-left: 200px;
+    }
+
+}
+  
+  /* Estilos para dispositivos móviles en posición horizontal */
+  @media screen and (max-width: 480px) and (orientation: landscape) {
+    /* Agrega aquí los estilos específicos para dispositivos móviles en posición horizontal */
+}
+  
+  /* Estilos para dispositivos móviles en posición vertical */
+  @media screen and (max-width: 480px) and (orientation: portrait) {
+    /* Agrega aquí los estilos específicos para dispositivos móviles en posición vertical */
+}
